@@ -174,7 +174,6 @@ def stdt_temp(d1, m1, y1):
     #query is below   
     dt_tobs = sesh.query(*stdt_stats).filter( measur.date > st_date).all()
     stdt_di = {'Average Temp':dt_tobs[0][0], 'Min Temp':dt_tobs[0][1], 'Max Temp': dt_tobs[0][2]}
-    #test_di = {'Date':st_dt, 'year':y1}
     return jsonify(stdt_di)
 
             
